@@ -10,6 +10,10 @@ recipe            'mysql::client', 'Installs packages required for mysql clients
 recipe            'mysql::server', 'Installs packages required for mysql servers w/o manual intervention'
 recipe            'mysql::server_ec2', 'Performs EC2-specific mountpoint manipulation'
 
+
+depends "openssl"
+depends "build-essential"
+
 # actually tested on
 supports 'redhat'
 supports 'amazon'
